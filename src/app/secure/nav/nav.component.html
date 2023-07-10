@@ -17,9 +17,15 @@
     placeholder="Search"
     aria-label="Search"
   />
+  <div class="navbar-nav mr-2">
+    <div class="nav-item text-nowrap">
+      <a class="nav-link px-3 text-white" href="#">{{user?.nomComplet}}</a>
+    </div>
+  </div>
+
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Sign out</a>
+      <a class="nav-link px-3" href="javascript:void(0)" (click)="logout()">Deconnexion</a>
     </div>
   </div>
 </header>
