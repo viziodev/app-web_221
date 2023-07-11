@@ -27,28 +27,23 @@
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Header</th>
-          <th scope="col">Header</th>
-          <th scope="col">Header</th>
+          <th scope="col">Nom et Prenom</th>
+          <th scope="col">Email</th>
           <th scope="col">Header</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1,001</td>
-          <td>random</td>
-          <td>data</td>
+        <tr *ngFor="let user of users">
+          <td></td>
+          <td>{{ user.nomComplet }}</td>
+          <td>{{ user.email }}</td>
           <td>placeholder</td>
-          <td>text</td>
-        </tr>
-        <tr>
-          <td>1,002</td>
-          <td>placeholder</td>
-          <td>irrelevant</td>
-          <td>visual</td>
-          <td>layout</td>
         </tr>
       </tbody>
     </table>
+   <e221-pagination [links]="meta" (pagination)="onPaginate($event)"></e221-pagination>
+  
   </div>
+
+
 </main>

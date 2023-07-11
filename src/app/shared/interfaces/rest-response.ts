@@ -1,5 +1,7 @@
-export interface RestResponse {
-  data?: any;
-  meta?: any;
-  token?: any;
-}
+ export  interface RestResponse {
+   data?: any;
+   meta?: any;
+   token?: any;
+ }
+
+

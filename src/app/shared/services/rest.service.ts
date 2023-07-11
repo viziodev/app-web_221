@@ -10,8 +10,12 @@ import { environment } from 'src/environments/environment';
 export abstract class RestService {
   abstract uri(): string;
   constructor(private http: HttpClient) {}
-  all(): Observable<RestResponse> {
-    return this.http.get<RestResponse>(`${environment.api}/${this.uri()}`);
+  all(url: string | null = null): Observable<RestResponse> {
+    if (url == null) {
+      url = `${environment.api}/${this.uri()}`;
+    }
+
+    return this.http.get<RestResponse>(`${url}`);
   }
   create(data: any): Observable<RestResponse> {
     return this.http.post<RestResponse>(

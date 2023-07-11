@@ -1,0 +1,11 @@
+<nav aria-label="Page navigation example ">
+      <ul class="pagination float-end">
+        <li
+          class="page-item "
+          [class.active]="link.active"
+          *ngFor="let link of meta.links"
+        >
+          <a class="page-link" href="javascript:void(0)" (click)="onPaginate(link.url)">{{ link.label }}</a>
+        </li>
+      </ul>
+    </nav>

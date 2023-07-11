@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavComponent } from './nav/nav.component';
 import { MenuComponent } from './menu/menu.component';
+import { UiModule } from '../shared/components/ui/ui.module';
 
 
 
@@ -21,8 +22,6 @@ import { MenuComponent } from './menu/menu.component';
     NavComponent,
     MenuComponent,
   ],
-  imports: [
-    CommonModule,RouterModule
-  ]
+  imports: [CommonModule, RouterModule, UiModule],
 })
-export class SecureModule { }
+export class SecureModule {}
